@@ -1,0 +1,47 @@
+{
+  "name": "flyde-coc-tool",
+  "version": "0.0.01",
+  "description": "",
+  "flyde": {
+    "exposes": [
+      "dist/*.flyde.js"
+    ],
+    "typings": "flyde-typings.d.ts"
+  },
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "author": "Projecet coc.",
+  "license": "MIT",
+  "dependencies": {
+    "@blueprintjs/core": "^5.0.0",
+    "@blueprintjs/select": "^5.0.20",
+    "@flyde/core": "latest",
+    "@flyde/runtime": "^0.5.59",
+    "@types/react": "^18.2.0",
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "css-loader": "^6.8.1",
+    "ts-loader": "^9.5.1",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.9.5",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4",
+    "concurrently": "^7.6.0"
+  },
+  "scripts": {
+    "dev": "pnpm run watch",
+    "watch": "concurrently --kill-others \"pnpm run watch:ts\" \"pnpm run macros:watch\"",
+    "build": "tsc -p tsconfig.build.json && pnpm run macros:bundle",
+    "b-dev": "bun run b-watch",
+    "b-watch": "concurrently --kill-others \"bun run watch:ts\" \"bun run macros:watch\"",
+    "b-build": "tsc -p tsconfig.build.json && bun run macros:bundle",
+    "macros:bundle": "webpack --config webpack.config.js",
+    "macros:watch": "webpack --config webpack.config.js --watch",
+    "watch:ts": "tsc -p . -w --incremental",
+    "ins-vscexdir":"pnpm ts-node ./test/ins-vscexdir.ts",
+    "bins-vscexdir":"bun ts-node ./test/ins-vscexdir.ts",
+    "__publish": "npm version patch && npm publish"
+  }
+}
