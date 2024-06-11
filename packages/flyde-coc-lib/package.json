@@ -1,6 +1,6 @@
 {
-  "name": "@project-coc/flyde-coc-lib",
-  "version": "0.0.01",
+  "name": "flyde-coc-lib",
+  "version": "0.0.02",
   "description": "",
   "flyde": {
     "exposes": ["nodes/**/*.flyde.ts", "nodes/**/*.flyde"],
