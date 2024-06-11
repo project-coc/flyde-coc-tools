@@ -1,0 +1,10 @@
+imports:
+  "@flyde/stdlib": []
+node:
+  instances: []
+  connections: []
+  id: tmp-work
+  inputs: {}
+  outputs: {}
+  inputsPosition: {}
+  outputsPosition: {}

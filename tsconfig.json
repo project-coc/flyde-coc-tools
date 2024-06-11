@@ -1,11 +1,10 @@
 {
-  "compilerOptions": {
-      "module": "commonjs",
+    "compilerOptions": {
+      "module": "NodeNext",
+      "moduleResolution": "NodeNext",
       "target": "es2019",
       "strict": false,
-      // "allowUnusedLabels": true,
-      // "allowUnreachableCode": false,
-      // "strictNullChecks": true,
+
       "noFallthroughCasesInSwitch": true,
       "noImplicitOverride": true,
       "noImplicitReturns": false,
@@ -19,12 +18,14 @@
       "forceConsistentCasingInFileNames": true,
       "lib": [
           "dom",
-          "es2019"
+          "ES2019",
       ],
-      "jsx": "react",
+      "jsx": "react-jsx",
       "declaration": true,
-      "declarationMap": true
-  },
+      "declarationMap": true,
+  
+      "outDir": "./dist"
+    },
   "include": ["src/*.ts", "src/*.tsx"],
   "exclude": [
       "node_modules",

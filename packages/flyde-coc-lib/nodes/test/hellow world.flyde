@@ -1,0 +1,22 @@
+imports:
+  "@flyde/stdlib":
+    - InlineValue
+node:
+  instances:
+    - pos:
+        x: -215.77799804687498
+        y: -139.16665649414062
+      id: rebo2z1o4vi3dny50jf0uit1
+      inputConfig: {}
+      nodeId: InlineValue__rebo2z1o4vi3dny50jf0uit1
+      macroId: InlineValue
+      macroData:
+        type: string
+        value: Hello world
+        label: '"Hello world"'
+  connections: []
+  id: hellow world
+  inputs: {}
+  outputs: {}
+  inputsPosition: {}
+  outputsPosition: {}
