@@ -14,9 +14,20 @@ node:
         type: string
         value: Hello world
         label: '"Hello world"'
-  connections: []
+  connections:
+    - from:
+        insId: rebo2z1o4vi3dny50jf0uit1
+        pinId: value
+      to:
+        insId: __this
+        pinId: out
   id: hellow world
   inputs: {}
-  outputs: {}
+  outputs:
+    out:
+      delayed: false
   inputsPosition: {}
-  outputsPosition: {}
+  outputsPosition:
+    out:
+      x: -146.98949951171875
+      y: 36.19307128906249

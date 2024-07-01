@@ -14,7 +14,7 @@
     "@blueprintjs/core": "^5.0.0",
     "@blueprintjs/select": "^5.0.20",
     "@flyde/core": "latest",
-    "@flyde/runtime": "^0.5.59",
+    "@types/node": "^20.14.9",
     "@types/react": "^18.2.0",
     "react": "^18.2.0"
   },
@@ -38,8 +38,8 @@
     "macros:bundle": "webpack --config webpack.config.js",
     "macros:watch": "webpack --config webpack.config.js --watch",
     "watch:ts": "tsc -p . -w --incremental",
-    "ins-vscexdir":"pnpm ts-node ./test/ins-vscexdir.ts",
-    "bins-vscexdir":"bun ts-node ./test/ins-vscexdir.ts",
+    "ins-vscexdir": "pnpm ts-node ./test/ins-vscexdir.ts",
+    "bins-vscexdir": "bun ts-node ./test/ins-vscexdir.ts",
     "__publish": "npm version patch && npm publish"
   }
 }

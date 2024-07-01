@@ -1,0 +1,238 @@
+imports:
+  ..\list\getpath-by-extension.flyde.ts:
+    - getpath_of_extension
+  "@flyde/stdlib":
+    - InlineValue
+    - SpreadList
+    - Read File
+    - Delay
+    - Concat
+    - CodeExpression
+node:
+  instances:
+    - pos:
+        x: -275.75567626953125
+        y: -284.78566162109377
+      id: c3evtueq2bmjqnl0nq3dsf4n
+      inputConfig: {}
+      nodeId: InlineValue__c3evtueq2bmjqnl0nq3dsf4n
+      macroId: InlineValue
+      macroData:
+        type: string
+        value: .
+        label: '"."'
+    - pos:
+        x: -21.187739257812495
+        y: -289.0459826660156
+      id: snx04d0kpf5pfyq7nd9zis31
+      inputConfig: {}
+      nodeId: InlineValue__snx04d0kpf5pfyq7nd9zis31
+      macroId: InlineValue
+      macroData:
+        type: string
+        value: list
+        label: '"list"'
+    - pos:
+        x: -235.18556884765624
+        y: -78.82042602539062
+      id: getpath_of_extension-sx049gs
+      inputConfig: {}
+      nodeId: getpath_of_extension
+    - pos:
+        x: -225.27222900390626
+        y: 38.173605957031256
+      id: j0r5n0jsk3ojv1qn4vyn691m
+      inputConfig: {}
+      nodeId: SpreadList__j0r5n0jsk3ojv1qn4vyn691m
+      macroId: SpreadList
+      macroData:
+        count: 2
+    - pos:
+        x: -338.7853076171875
+        y: 213.07985015869139
+      id: Read File-8m049pa
+      inputConfig: {}
+      nodeId: Read File
+    - pos:
+        x: -62.81930419921875
+        y: 222.06350799560545
+      id: collect-local-list-i21496c
+      inputConfig: {}
+      nodeId: Read File
+    - pos:
+        x: -50.40717529296876
+        y: 149.13465900350866
+      id: cfxjfq8hqgithe66uemhp2ki
+      inputConfig: {}
+      nodeId: Delay__cfxjfq8hqgithe66uemhp2ki
+      macroId: Delay
+      macroData:
+        delayMs:
+          value: 100
+          mode: static
+    - pos:
+        x: -376.94037841796876
+        y: 493.3289213936454
+      id: swjnt5uu8f95gq1z8riuveuf
+      inputConfig: {}
+      nodeId: Delay__swjnt5uu8f95gq1z8riuveuf
+      macroId: Delay
+      macroData:
+        delayMs:
+          value: 20
+          mode: static
+    - pos:
+        x: -184.34232666015623
+        y: 261.9627287495379
+      id: c0bj7fh74ozlqvp8m8ieeqxw
+      inputConfig: {}
+      nodeId: InlineValue__c0bj7fh74ozlqvp8m8ieeqxw
+      macroId: InlineValue
+      macroData:
+        type: string
+        value: ""
+        label: '""'
+    - pos:
+        x: -355.03983642578123
+        y: 371.88220689895195
+      id: Concat-1z049pf
+      inputConfig: {}
+      nodeId: Concat
+    - pos:
+        x: -419.4234729003906
+        y: 613.0648497212176
+      id: imou2votvf5aabgcpbqa18oa
+      inputConfig: {}
+      nodeId: CodeExpression__imou2votvf5aabgcpbqa18oa
+      macroId: CodeExpression
+      macroData:
+        value: inputs.a.split(/\n/)
+        label: '"inputs.a + inputs.b"'
+    - pos:
+        x: -55.43510009765623
+        y: 383.8752183735613
+      id: collect-local-list-3t149d3
+      inputConfig: {}
+      nodeId: Concat
+    - pos:
+        x: -70.43097900390626
+        y: 499.5848112862235
+      id: collect-local-list-3u349rd
+      inputConfig: {}
+      nodeId: Delay__collect-local-list-3u349rd
+      macroId: Delay
+      macroData:
+        delayMs:
+          value: 20
+          mode: static
+    - pos:
+        x: -100.4007678222656
+        y: 610.3158568012957
+      id: collect-local-list-3u449i0
+      inputConfig: {}
+      nodeId: CodeExpression__collect-local-list-3u449i0
+      macroId: CodeExpression
+      macroData:
+        value: inputs.a.split(/\n/)
+        label: '"inputs.a + inputs.b"'
+    - pos:
+        x: 152.08174560546877
+        y: 258.1438047993426
+      id: collect-local-list-fr5493h
+      inputConfig: {}
+      nodeId: InlineValue__collect-local-list-fr5493h
+      macroId: InlineValue
+      macroData:
+        type: string
+        value: ""
+        label: '""'
+  connections:
+    - from:
+        insId: c3evtueq2bmjqnl0nq3dsf4n
+        pinId: value
+      to:
+        insId: getpath_of_extension-sx049gs
+        pinId: dir
+    - from:
+        insId: snx04d0kpf5pfyq7nd9zis31
+        pinId: value
+      to:
+        insId: getpath_of_extension-sx049gs
+        pinId: extension
+    - from:
+        insId: getpath_of_extension-sx049gs
+        pinId: paths
+      to:
+        insId: j0r5n0jsk3ojv1qn4vyn691m
+        pinId: list
+    - from:
+        insId: j0r5n0jsk3ojv1qn4vyn691m
+        pinId: item1
+      to:
+        insId: Read File-8m049pa
+        pinId: path
+    - from:
+        insId: j0r5n0jsk3ojv1qn4vyn691m
+        pinId: item2
+      to:
+        insId: cfxjfq8hqgithe66uemhp2ki
+        pinId: value
+    - from:
+        insId: cfxjfq8hqgithe66uemhp2ki
+        pinId: delayedValue
+      to:
+        insId: collect-local-list-i21496c
+        pinId: path
+    - from:
+        insId: Read File-8m049pa
+        pinId: contents
+      to:
+        insId: Concat-1z049pf
+        pinId: a
+    - from:
+        insId: c0bj7fh74ozlqvp8m8ieeqxw
+        pinId: value
+      to:
+        insId: Concat-1z049pf
+        pinId: b
+    - from:
+        insId: Concat-1z049pf
+        pinId: value
+      to:
+        insId: swjnt5uu8f95gq1z8riuveuf
+        pinId: value
+    - from:
+        insId: swjnt5uu8f95gq1z8riuveuf
+        pinId: delayedValue
+      to:
+        insId: imou2votvf5aabgcpbqa18oa
+        pinId: a
+    - from:
+        insId: collect-local-list-3u349rd
+        pinId: delayedValue
+      to:
+        insId: collect-local-list-3u449i0
+        pinId: a
+    - from:
+        insId: collect-local-list-3t149d3
+        pinId: value
+      to:
+        insId: collect-local-list-3u349rd
+        pinId: value
+    - from:
+        insId: collect-local-list-fr5493h
+        pinId: value
+      to:
+        insId: collect-local-list-3t149d3
+        pinId: b
+    - from:
+        insId: collect-local-list-i21496c
+        pinId: contents
+      to:
+        insId: collect-local-list-3t149d3
+        pinId: a
+  id: collect-local-list
+  inputs: {}
+  outputs: {}
+  inputsPosition: {}
+  outputsPosition: {}
